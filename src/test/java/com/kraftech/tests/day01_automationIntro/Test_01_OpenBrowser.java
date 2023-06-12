@@ -11,6 +11,7 @@ public class Test_01_OpenBrowser {
 
 
         WebDriverManager.chromedriver().setup();
+
         WebDriver driver =new ChromeDriver();
         driver.get("http://www.google.com");
         driver.get("http://facebook.com");
@@ -18,6 +19,16 @@ public class Test_01_OpenBrowser {
 
         String actualTitle = driver.getTitle();
         String expectedTitle = driver.getTitle();
+        if(expectedTitle.equals(actualTitle)){
+            System.out.println("passed");
+        }else{
+            System.out.println("fialed");
+        }
+        WebDriver driver1=new ChromeDriver();
+        driver1.get("http://www.google.com");//driver quıt aynı driver üzerinde açlan
+        //tabları kapatırken quit close aktif olan sayfayı kapatır.
+
+        driver1.quit();
 
 
 
