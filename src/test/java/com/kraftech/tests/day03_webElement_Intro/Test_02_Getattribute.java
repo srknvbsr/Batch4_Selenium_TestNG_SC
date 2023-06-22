@@ -1,5 +1,6 @@
 package com.kraftech.tests.day03_webElement_Intro;
 
+import com.kraftech.utlities.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,10 +17,18 @@ public class Test_02_Getattribute {
          * verify both
          */
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.navigate().to("https://www.krafttechexlab.com/login");
+
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://www.krafttechexlab.com/login");
+        Thread.sleep(2000);
+
         WebElement email = driver.findElement(By.id("email"));
+        email.sendKeys("Karalama");
+        Thread.sleep(2000);
+
+
+
+       /* WebElement email = driver.findElement(By.id("email"));
         email.sendKeys("Karalama");
 
         Thread.sleep(3000);
@@ -38,6 +47,8 @@ public class Test_02_Getattribute {
         }
 
         driver.quit();
+
+        */
 
 
     }

@@ -1,4 +1,4 @@
-package com.kraftech.tests.day_02_webdriver_basics;
+package com.kraftech.tests.day02_webdriver_basics;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +20,15 @@ public class Test_02_GetMethod {
         String url = driver.getCurrentUrl();
         String sourcePage = driver.getPageSource();
 
+        if(title.toLowerCase().contains("hepsiburada")&&url.toLowerCase().contains("hepsiburada")&&sourcePage.toLowerCase()
+                .contains("hepsiburada")){
+            System.out.println("pass");
+        }else{
+            System.out.println("fail");
+        }
 
+
+        /*Benim yaptığım örnek sonucu:
         boolean titleKeyword = title.toLowerCase().contains("hepsiburada");
         boolean urlKeyword = url.toLowerCase().contains("hepsiburada");
         boolean pageSourceKeyword = sourcePage.toLowerCase().contains("hepsiburada");
@@ -28,6 +36,8 @@ public class Test_02_GetMethod {
         System.out.println("titleKeyword = " + titleKeyword);
         System.out.println("urlKeyword = " + urlKeyword);
         System.out.println("pageSourceKeyword = " + pageSourceKeyword);
+
+         */
         driver.quit();
 
 
