@@ -1,7 +1,6 @@
 package com.kraftech.tests.day03_webElement_Intro;
 
 import com.kraftech.utlities.WebDriverFactory;
-import com.kraftech.utlities.Webdriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,7 @@ import org.openqa.selenium.WebElement;
 public class Test_01_ClickSendKeys {
     public static void main(String[] args) throws InterruptedException {
         /**
-         * Open chore browser
+         * Open chorme browser
          * navigate to https://www.amazon.com/
          * write "Java" to the search bar
          * click search button
@@ -23,8 +22,8 @@ public class Test_01_ClickSendKeys {
         Thread.sleep(2000);
 
 
-        WebElement searchtbox = drive.findElement(By.id("twotabsearchtextbox"));
-        searchtbox.sendKeys("Java");
+        WebElement searchtBox = drive.findElement(By.id("twotabsearchtextbox"));
+        searchtBox.sendKeys("Java");
         Thread.sleep(2000);
 
 
@@ -44,8 +43,6 @@ public class Test_01_ClickSendKeys {
         } else {
             System.out.println("fail");
         }
-
-
         drive.quit();
     }
 }

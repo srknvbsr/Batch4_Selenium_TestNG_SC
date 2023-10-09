@@ -28,16 +28,6 @@ public class Test_02_GetMethod {
         }
 
 
-        /*Benim yaptığım örnek sonucu:
-        boolean titleKeyword = title.toLowerCase().contains("hepsiburada");
-        boolean urlKeyword = url.toLowerCase().contains("hepsiburada");
-        boolean pageSourceKeyword = sourcePage.toLowerCase().contains("hepsiburada");
-
-        System.out.println("titleKeyword = " + titleKeyword);
-        System.out.println("urlKeyword = " + urlKeyword);
-        System.out.println("pageSourceKeyword = " + pageSourceKeyword);
-
-         */
         driver.quit();
 
 

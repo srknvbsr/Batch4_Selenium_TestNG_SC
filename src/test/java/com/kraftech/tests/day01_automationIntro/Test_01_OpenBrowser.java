@@ -25,8 +25,9 @@ public class Test_01_OpenBrowser {
             System.out.println("fialed");
         }
         WebDriver driver1=new ChromeDriver();
-        driver1.get("http://www.google.com");//driver quıt aynı driver üzerinde açlan
-        //tabları kapatırken quit close aktif olan sayfayı kapatır.
+        driver1.get("http://www.google.com");//driver quıt aynı driver üzerinde açlan tabları kapatır.Bu örnekte
+        //driver1 kapanmaz.
+
 
         driver1.quit();
 

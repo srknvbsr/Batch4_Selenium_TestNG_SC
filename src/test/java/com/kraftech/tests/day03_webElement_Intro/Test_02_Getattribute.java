@@ -22,22 +22,19 @@ public class Test_02_Getattribute {
         driver.get("https://www.krafttechexlab.com/login");
         Thread.sleep(2000);
 
-        WebElement email = driver.findElement(By.id("email"));
-        email.sendKeys("Karalama");
-        Thread.sleep(2000);
 
-
-
-       /* WebElement email = driver.findElement(By.id("email"));
-        email.sendKeys("Karalama");
+       WebElement webElementBox = driver.findElement(By.id("email"));
+        webElementBox.sendKeys("Karalama");
 
         Thread.sleep(3000);
 
-        String actualValue = email.getAttribute("value");
+        String actualValue = webElementBox.getAttribute("value");
+        System.out.println("actualValue = " + actualValue);
         String expectedValue = "Karalama";
 
 
-        String actualId = email.getAttribute("id");
+        String actualId = webElementBox.getAttribute("id");
+        System.out.println("actualId = " + actualId);
         String expectedId = "email";
 
         if (actualValue.equals(expectedValue) && actualId.equals(expectedId)) {
@@ -48,7 +45,6 @@ public class Test_02_Getattribute {
 
         driver.quit();
 
-        */
 
 
     }

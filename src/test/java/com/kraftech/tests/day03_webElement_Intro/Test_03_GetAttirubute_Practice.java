@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test_03_GetAttirubute_Practice {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         /**
          * set up a chrome driver and navigate to http://ourvirtualmarket.com/
@@ -36,6 +36,7 @@ public class Test_03_GetAttirubute_Practice {
         // Click the login link
         WebElement loginLink = driver.findElement(By.linkText("Login"));
         loginLink.click();
+        Thread.sleep(2000);
 
         // Enter the email address
         WebElement emailBox = driver.findElement(By.id("email"));
