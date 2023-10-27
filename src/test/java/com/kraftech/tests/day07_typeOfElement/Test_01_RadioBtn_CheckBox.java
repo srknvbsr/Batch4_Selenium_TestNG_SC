@@ -48,10 +48,10 @@ public class Test_01_RadioBtn_CheckBox {
 
 
         WebElement option3 = driver.findElement(By.cssSelector("[value='option-3']"));
-        Assert.assertTrue(option3.isSelected(), "verify that option 3 is selected");
+        assertTrue(option3.isSelected(), "verify that option 3 is selected");
         option3.click();
         Thread.sleep(2000);
-        Assert.assertFalse(option3.isSelected());
+        assertFalse(option3.isSelected());
 
         WebElement option2 = driver.findElement(By.cssSelector("[value='option-2']"));
         Assert.assertFalse(option2.isSelected(), "verify that option 2 is NOT selected");

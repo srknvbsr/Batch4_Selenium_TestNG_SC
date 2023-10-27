@@ -18,7 +18,7 @@ public class Test_02_DropDowns {
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().window().setPosition(new Point(-1000, 0));
+        //driver.manage().window().setPosition(new Point(-1000, 0));
         driver.manage().window().maximize();
     }
 
@@ -31,7 +31,7 @@ public class Test_02_DropDowns {
     public void withSelectTag() throws InterruptedException {
 
         /**
-         * navigate to https://www.amazon.com/"
+         * navigate to https://www.amazon.com/
          * locate the dropdown menu nearby the search box
          * select the Baby department by using text then print the department name
          * select the Books department by using index then print the department name
@@ -41,7 +41,8 @@ public class Test_02_DropDowns {
          * get the text of fifth element and verify that the text is Books
          */
 
-        driver.get("https://www.amazon.com/");
+        driver.get("https://www.amazon.com");
+        Thread.sleep(2000);
 
         WebElement searchDropdownBox = driver.findElement(By.id("searchDropdownBox"));
 
@@ -61,12 +62,13 @@ public class Test_02_DropDowns {
         Thread.sleep(2000);
 
         List<WebElement> options = select.getOptions();
+        options.forEach(option1 -> {
+            System.out.println(option1.getText());
+        });
 
         options.forEach(option -> System.out.println(option.getText()));
 
         System.out.println("options.get(5).getText() = " + options.get(5).getText());
-
-
     }
 
 

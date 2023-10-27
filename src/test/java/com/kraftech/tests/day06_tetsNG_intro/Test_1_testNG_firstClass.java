@@ -1,6 +1,7 @@
 package com.kraftech.tests.day06_tetsNG_intro;
 
 import com.kraftech.utlities.WebDriverFactory;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,7 +44,6 @@ public class Test_1_testNG_firstClass {
         Thread.sleep(2000);
 
         driver.navigate().back();
-        Thread.sleep(2000);
 
         driver.findElement(By.id("account_activity_link")).click();
         Thread.sleep(2000);
@@ -64,6 +64,9 @@ public class Test_1_testNG_firstClass {
         driver.close();
 
     }
+
+
+
 
     @Test
     public void test2() throws InterruptedException {
