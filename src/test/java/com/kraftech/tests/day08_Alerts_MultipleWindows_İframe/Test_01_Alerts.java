@@ -64,7 +64,7 @@ public class Test_01_Alerts {
          * accept alert
          *
          * click show confirm box
-         * hen take message on the js popup and print it
+         * Then take message on the js popup and print it
          * dismiss alert
          *
          * click show prompt box
@@ -105,9 +105,6 @@ public class Test_01_Alerts {
         Thread.sleep(2000);
 
         Assert.assertEquals(actualText,expected);
-
-
-
 
     }
 
